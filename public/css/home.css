@@ -1,0 +1,21 @@
+.hero {
+	padding-top: 20px;
+}
+
+.f-society {
+	font-family: 'Major Mono Display', monospace;
+}
+
+.quote {
+	font-family: 'VT323', monospace;
+}
+
+.copyright {
+	margin-top: 10px;
+	font-family: 'VT323', monospace;
+}
+
+.link {
+	padding: 0 50px;
+	font-family: 'VT323', monospace;
+}
