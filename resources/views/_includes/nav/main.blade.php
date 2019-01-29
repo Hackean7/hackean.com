@@ -10,7 +10,7 @@
     </a>
     @endif
 
-    <a role="button" class="navbar-burger" aria-label="menu">
+    <a role="button" class="navbar-burger" aria-label="menu" id="navbar-burger-id">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -18,12 +18,12 @@
     </a>
     </div>
     @guest
-    <div class="navbar-menu">
+    <div id="navbar-menu-id" class="navbar-menu">
         <div class="navbar-start">
-            <a href="/home" class="navbar-item is-tab is-hidden-mobile m-l-10">Home</a>
-            <a href="/blog" class="navbar-item is-tab is-hidden-mobile m-l-10">Blog</a>
-            <a href="/about" class="navbar-item is-tab is-hidden-mobile m-l-10">About Us</a>
-            <a href="/contact" class="navbar-item is-tab is-hidden-mobile m-l-10">Contact Us</a>
+            <a href="/home" class="navbar-item is-tab m-l-10">Home</a>
+            <a href="/blog" class="navbar-item is-tab m-l-10">Blog</a>
+            <a href="/about" class="navbar-item is-tab m-l-10">About Us</a>
+            <a href="/contact" class="navbar-item is-tab m-l-10">Contact Us</a>
         </div>
 
         <div class="navbar-end">
@@ -38,13 +38,13 @@
         </div>
     </div>
     @else
-        <div class="navbar-menu">
+        <div class="navbar-menu" id="navbar-menu-id">
         <div class="navbar-start">
-            <a href="/home" class="navbar-item is-tab is-hidden-mobile m-l-10">Home</a>
-            <a href="/blog" class="navbar-item is-tab is-hidden-mobile m-l-10">Blog</a>
-            <a href="/about" class="navbar-item is-tab is-hidden-mobile m-l-10">About Us</a>
-            <a href="/contact" class="navbar-item is-tab is-hidden-mobile m-l-10">Contact Us</a>
-            <a href="/account" class="navbar-item is-tab is-hidden-mobile m-l-10">My Account</a>
+            <a href="/home" class="navbar-item is-tab m-l-10">Home</a>
+            <a href="/blog" class="navbar-item is-tab m-l-10">Blog</a>
+            <a href="/about" class="navbar-item is-tab m-l-10">About Us</a>
+            <a href="/contact" class="navbar-item is-tab m-l-10">Contact Us</a>
+            <a href="/account" class="navbar-item is-tab m-l-10">My Account</a>
         </div>
 
         <div class="navbar-end">
@@ -63,24 +63,26 @@
 
 @section('scripts')
     <script>
-      $('.navbar-item').each(function(e) {
-        $(this).click(function(){
-          if($('#navbar-burger-id').hasClass('is-active')){
-            $('#navbar-burger-id').removeClass('is-active');
-            $('#navbar-menu-id').removeClass('is-active');
-          }
-        });
-      });
+        // Close mobile & tablet menu on item click
+          $('.navbar-item').each(function(e) {
+            $(this).click(function(){
+              if($('#navbar-burger-id').hasClass('is-active')){
+                $('#navbar-burger-id').removeClass('is-active');
+                $('#navbar-menu-id').removeClass('is-active');
+              }
+            });
+          });
 
-      $('#navbar-burger-id').click(function () {
-        if($('#navbar-burger-id').hasClass('is-active')){
-          $('#navbar-burger-id').removeClass('is-active');
-          $('#navbar-menu-id').removeClass('is-active');
-        }else {
-          $('#navbar-burger-id').addClass('is-active');
-          $('#navbar-menu-id').addClass('is-active');
-        }
-      });
+          // Open or Close mobile & tablet menu
+          $('#navbar-burger-id').click(function () {
+            if($('#navbar-burger-id').hasClass('is-active')){
+              $('#navbar-burger-id').removeClass('is-active');
+              $('#navbar-menu-id').removeClass('is-active');
+            }else {
+              $('#navbar-burger-id').addClass('is-active');
+              $('#navbar-menu-id').addClass('is-active');
+            }
+          });
     </script>
 @endsection
 
