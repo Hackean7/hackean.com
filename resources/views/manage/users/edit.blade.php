@@ -1,4 +1,4 @@
-@extends('layouts.manage') @section('content')
+@extends('layouts.manage') @section('title', '| Edit User') @section('content')
 
 <div class="flex-container">
     <div class="columns m-t-10">
@@ -43,11 +43,8 @@
                         </div>
                     </b-radio-group>
                 </div>
-            </div>
-        </div>
 
-        <div class="column">
-            <label for="roles" class="label">Roles:</label>
+            <label for="roles" class="label m-t-30">Roles:</label>
             <input type="hidden" name="roles" :value="rolesSelected">
             <b-checkbox-group v-model="rolesSelected">
                 @foreach ($roles as $role)
@@ -56,15 +53,10 @@
                 </div>
                 @endforeach
             </b-checkbox-group>
-        </div>
-
-        <div class="columns">
-            <div class="column">
-                <hr>
-                <button class="button is-primary is-medium is-focused">Edit User</button>
-            </div>
-        </div>
+            <button class="button is-primary is-medium is-focused m-t-30">Edit User</button>
     </form>
+    </div>
+    </div>
 </div>
 
 @endsection 

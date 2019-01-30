@@ -28,10 +28,19 @@
                         <div class="field">
                             <label for="password" class="label m-t-10">Password</label>
                             <p class="control">
-                                <input type="text" class="input is-primary" name="password" id="password" v-if="!auto_password">
-                                <b-checkbox name="auto_generate" class="m-t-15" :checked="true" v-model="auto_password">Auto Generate Password</b-checkbox>
+                                <input type="text" class="input is-primary" name="password" id="password" v-if="!auto_password" placeholder="Manually give a password to this user">
+                                <b-checkbox name="auto_generate" class="m-t-15" v-model="auto_password">Auto Generate Password</b-checkbox>
                             </p>
                         </div>
+
+                        <label for="roles" class="label m-t-20">Roles:</label>
+                        <input type="hidden" name="roles" :value="rolesSelected">
+
+                        @foreach ($roles as $role)
+                        <div class="field">
+                             <b-checkbox v-model="rolesSelected" :native-value="{{$role->id}}">{{$role->display_name}}</b-checkbox>
+                        </div>
+                        @endforeach
 
                         <button class="button is-medium is-success is-focused m-t-20">Create User</button>
                     </form>
@@ -42,10 +51,11 @@
 @endsection @section('scripts')
 <script>
     var app = new Vue({
-        el: '#app',
-        data: {
-            auto_password: true
-        }
+      el: '#app',
+      data: {
+        auto_password: true,
+        rolesSelected: [{!! old('roles') ? old('roles') : '' !!}]
+      }
     });
 </script>
 @endsection

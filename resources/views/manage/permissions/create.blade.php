@@ -1,4 +1,4 @@
-@extends('layouts.manage') @section('content')
+@extends('layouts.manage') @section('title', '| Create Permission') @section('content')
 
 <div class="flex-container">
     <div class="columns m-t-10">
@@ -28,9 +28,9 @@
                 </div>
 
                 <div class="field" v-if="permissionType == 'basic'">
-                    <label for="name" class="label m-t-20"">Slug</label>
+                    <label for="name" class="label m-t-20">Slug</label>
                     <p class="control">
-                        <input type="text" class="input is-primary" placeholder="Slug"name" id="name">
+                        <input type="text" class="input is-primary" placeholder="Slug" name="name" id="name">
                     </p>
                 </div>
 
@@ -87,7 +87,7 @@
                     </div>
                 </div>
 
-                <button class="button is-success is-focused is-medium m-t-20">Create Permission</button>
+                <button class="button is-success is-focused is-medium m-t-30">Create Permission</button>
             </form>
         </div>
     </div>
