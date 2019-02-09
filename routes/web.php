@@ -67,10 +67,13 @@ Route::prefix('manage')->middleware('role:superadministrator')->group(function (
 	Route::delete('/comments/{id}', ['uses' => 'CommentsController@destroy', 'as' => 'comments.destroy']);
 
 	Route::get('/comment/{id}/delete', ['uses' => 'CommentsController@delete', 'as' => 'comments.delete']);
-    
+
 });
 
 // Auth
 
 Auth::routes(['verify' => true]);
 
+// Forum 
+
+Route::get('/forum', 'ForumController@index');

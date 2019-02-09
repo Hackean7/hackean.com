@@ -33,7 +33,7 @@
                             <th> {{ $post->id }} </th>
                             <th> {{ $post->title }} </th>
                             <td> {{ $post->slug }} </td>
-                            <td> {{ substr($post->content, 0, 50) }} {{ strlen($post->content) > 50 ? "..." : "" }} </td>
+                            <td> {{ substr($post->content, 0, 20) }} {{ strlen($post->content) > 20 ? "..." : "" }} </td>
                             <td> {{ date('M j, Y', strtotime($post->created_at)) }} </td>
                             <td> <a href="{{ route('posts.show', $post->id) }}" class="button  is-outlined "> View </a> </td>
                             <td> <a href="{{ route('posts.edit', $post->id) }}" class="button  is-outlined"> Edit </a> </td>

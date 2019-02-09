@@ -7,9 +7,11 @@ $titleTag = htmlspecialchars($post->title);
 @section('stylesheets')
 
 <style type="text/css" media="screen">
-    figure {
+    .image {
         position: absolute;
-        left: 47vw;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
     .post-title {
         font-family: 'Major Mono Display', monospace;

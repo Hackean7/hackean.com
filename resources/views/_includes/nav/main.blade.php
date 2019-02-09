@@ -22,6 +22,7 @@
         <div class="navbar-start">
             <a href="/home" class="navbar-item is-tab m-l-10">Home</a>
             <a href="/blog" class="navbar-item is-tab m-l-10">Blog</a>
+            <a href="/forum" class="navbar-item is-tab m-l-10">Forum</a>
             <a href="/about" class="navbar-item is-tab m-l-10">About Us</a>
             <a href="/contact" class="navbar-item is-tab m-l-10">Contact Us</a>
         </div>
@@ -42,6 +43,7 @@
         <div class="navbar-start">
             <a href="/home" class="navbar-item is-tab m-l-10">Home</a>
             <a href="/blog" class="navbar-item is-tab m-l-10">Blog</a>
+            <a href="/forum" class="navbar-item is-tab m-l-10">Forum</a>
             <a href="/about" class="navbar-item is-tab m-l-10">About Us</a>
             <a href="/contact" class="navbar-item is-tab m-l-10">Contact Us</a>
             <a href="/account" class="navbar-item is-tab m-l-10">My Account</a>

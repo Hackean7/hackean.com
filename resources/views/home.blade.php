@@ -17,10 +17,9 @@
             </div>
         </div>
 
-
                 @foreach($posts as $post)
                 <div class="columns has-text-centered m-t-30">
-                <div class="column is-one-third">
+                <div class="column is-three-fifths is-offset-one-fifth">
                     <div class="box" style="font-family: 'Inconsolata', monospace; background-color: #f7f7f7;">
 
                         <h2 class="title is-2 m-t-10">{{ $post->title }}</h2>

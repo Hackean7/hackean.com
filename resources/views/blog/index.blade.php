@@ -11,8 +11,8 @@
     @foreach ($posts as $post)
     <div class="columns has-text-centered">
 
-        <div class="column is-one-third">
-            <div class="box" style="background-color: #f7f7f7; font-family: 'Raleway', sans-serif;">
+        <div class="column is-half is-offset-one-quarter">
+            <div class="box m-b-30 m-t-15" style="background-color: #f7f7f7; font-family: 'Raleway', sans-serif;">
             <h2 class="title is-2 m-t-10">{{ $post->title }}</h2>
 
             <div class="subtitle is-6">Published: {{ date('M j, Y', strtotime($post->created_at)) }}</div>

@@ -9,7 +9,7 @@
             <li><a href="{{ route('manage.dashboard') }}" class="{{ Nav::isRoute('manage.dashboard') }}">Dashboard</a></li>
         </ul>
 
-        <p class="menu-label">
+        <p class="menu-label m-t-20">
             Content
         </p>
 
@@ -31,7 +31,23 @@
             </li>
         </ul>
 
-        <p class="menu-label">
+        <p class="menu-label m-t-20">
+            Forum Content
+        </p>
+
+        <ul class="menu-list">
+            <li>
+                <a href="#" class="{{ Nav::isResource('tags', 2) }} m-b-10">Forum Threads</a>
+            </li>
+        </ul>
+
+        <ul class="menu-list">
+            <li>
+                <a href="#" class="{{ Nav::isResource('tags', 2) }} m-b-10">Forum Replies</a>
+            </li>
+        </ul>
+
+        <p class="menu-label m-t-20">
             Administration
         </p>
 
